@@ -224,6 +224,7 @@ body {
 
 .top-content__form-btn {
   height: 60px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .top-content__form-btn:hover {

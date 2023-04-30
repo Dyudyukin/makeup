@@ -1,7 +1,7 @@
 var swiper = new Swiper('.swiper', {
   slidesPerView: 3,
   loop: true,
-  rewind: true,
+  // rewind: true,
   // direction: getDirection(),
   navigation: {
     nextEl: '.swiper-button-next',
