@@ -223,6 +223,11 @@ body {
   font-size: 25px;
 }
 
+.top-content__form input[type='text']:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #c4c4c4; /* цвет вашего фона */
+  -webkit-text-fill-color: #ffffff; /* цвет текста */
+}
+
 .top-content__form-btn {
   height: 60px;
   background: rgba(255, 255, 255, 0.1);
