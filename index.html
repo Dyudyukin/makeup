@@ -7,9 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <title>Студия красоты</title>
 </head>
 
@@ -40,7 +44,7 @@
           <div class="top-content__left">
             <div class="top-content__title">
               <h2>Голливудские брови, глаза и губы от 2900</h2>
-              <h1>Перманетный макияж от&nbsp;студии <br />"Название студии"</h1>
+              <h1>Перманетный макияж от&nbsp;студии <br /><span>Анны Малых</span></h1>
               <h2>Запишись сегодня, чтобы получить скидку</h2>
             </div>
             <div class="top-content__sale">
@@ -87,7 +91,7 @@
         <div class="top-about__wrapper">
           <div class="top-about__left"><img src="./assets/img/top.jpg" alt="Image"></div>
           <div class="top-about__right">
-            <div class="top-about__title">Звёздный макияж от <span>студии "Название"</span></div>
+            <h2 class="top-about__title">Звёздный макияж от мастера <span>Анны Малых</span></h2>
             <div class="top-about__description">
               <div class="top-about__item">
                 <img class="top-about__img" src="./assets/icon/top-1.png" alt="icon">
@@ -108,6 +112,7 @@
     </section>
     <section class="about" id="about">
       <div class="wrapper">
+        <h2 class="hidden">Авторская техника Анны Малых</h2>
         <div class="about__wrapper">
           <div class="about__left">
             <div class="about__list">
@@ -139,13 +144,14 @@
     </section>
     <section class="sale">
       <div class="wrapper">
+        <h2 class="hidden">Запишитесь на перманентный макияж</h2>
         <div class="sale__content">
           <div class="sale__content-item">
             <div class="sale__content-discount"><span>20</span>%</div>
             <div class="sale__content-text"><span>Скидка</span> запишитесь&nbsp;на перманентный&nbsp;макияж</div>
           </div>
           <div class="sale__button">
-            <a href="#sale-offer"><button class="sale__button-btn primary-button">Записаться</button></a>
+            <a href="#sale-offer" class="sale__button-btn primary-button">Записаться</a>
           </div>
         </div>
       </div>
@@ -159,22 +165,20 @@
               <img src="./assets/img/brows.jpg" alt="brows">
               <span>Брови</span>
             </div>
-            <div class="portfolio__brows-slider">
-              <div class="portfolio__brows-slider-list">
-                <div class="portfolio__brows-slider-item">
-                  <img src="./assets/img/brows.jpg" alt="Slide-1">
-                </div>
-                <div class="portfolio__brows-slider-item">
-                  <img src="./assets/img/brows.jpg" alt="Slide-2">
-                </div>
-                <div class="portfolio__brows-slider-item">
-                  <img src="./assets/img/brows.jpg" alt="Slide-3">
-                </div>
+            <div class="swiper portfolio__brows-slider">
+              <div class="swiper-wrapper portfolio__brows-slider-list">
+                <div class="swiper-slide portfolio__brows-slider-item"> <img src="./assets/img/brows.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/brows.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/brows.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/brows.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/brows.jpg" alt="Slide-1"></div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
           <div class="portfolio__brows-button portfolio__line">
-            <a href="#sale-offer"><button class="portfolio__brows-btn primary-button">Хочу такие брови</button></a>
+            <a href="#sale-offer" class="portfolio__brows-btn primary-button">Хочу такие брови</a>
           </div>
         </div>
         <div class="portfolio__lips">
@@ -183,22 +187,20 @@
               <img src="./assets/img/lips.jpg" alt="lips">
               <span>Губы</span>
             </div>
-            <div class="portfolio__lips-slider">
-              <div class="portfolio__lips-slider-list">
-                <div class="portfolio__lips-slider-item">
-                  <img src="./assets/img/lips.jpg" alt="Slide-1">
-                </div>
-                <div class="portfolio__lips-slider-item">
-                  <img src="./assets/img/lips.jpg" alt="Slide-2">
-                </div>
-                <div class="portfolio__lips-slider-item">
-                  <img src="./assets/img/lips.jpg" alt="Slide-3">
-                </div>
+            <div class="swiper portfolio__lips-slider">
+              <div class="swiper-wrapper portfolio__lips-slider-list">
+                <div class="swiper-slide portfolio__lips-slider-item"> <img src="./assets/img/lips.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/lips.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/lips.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/lips.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/lips.jpg" alt="Slide-1"></div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
           <div class="portfolio__lips-button portfolio__line">
-            <a href="#sale-offer"><button class="portfolio__lips-btn primary-button">Хочу такие губы</button></a>
+            <a href="#sale-offer" class="portfolio__lips-btn primary-button">Хочу такие губы</a>
           </div>
         </div>
         <div class="portfolio__cilia">
@@ -207,22 +209,20 @@
               <img src="./assets/img/cilia.jpg" alt="cilia">
               <span>Ресницы</span>
             </div>
-            <div class="portfolio__cilia-slider">
-              <div class="portfolio__cilia-slider-list">
-                <div class="portfolio__cilia-slider-item">
-                  <img src="./assets/img/cilia.jpg" alt="Slide-1">
-                </div>
-                <div class="portfolio__cilia-slider-item">
-                  <img src="./assets/img/cilia.jpg" alt="Slide-2">
-                </div>
-                <div class="portfolio__cilia-slider-item">
-                  <img src="./assets/img/cilia.jpg" alt="Slide-3">
-                </div>
+            <div class="swiper portfolio__cilia-slider">
+              <div class="swiper-wrapper portfolio__cilia-slider-list">
+                <div class="swiper-slide portfolio__cilia-slider-item"> <img src="./assets/img/cilia.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/cilia.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/cilia.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/cilia.jpg" alt="Slide-1"></div>
+                <div class="swiper-slide"> <img src="./assets/img/cilia.jpg" alt="Slide-1"></div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
           <div class="portfolio__cilia-button portfolio__line">
-            <a href="#sale-offer"><button class="portfolio__cilia-btn primary-button">Хочу такие ресницы</button></a>
+            <a href="#sale-offer" class="portfolio__cilia-btn primary-button">Хочу такие ресницы</a>
           </div>
         </div>
       </div>
@@ -238,7 +238,7 @@
             </div>
             <div class="why__item">
               <img src="./assets/icon/top-2.png" alt="icon">
-              <span>придать взгляду выразительность («подведя» глаза по линии роста ресниц или создав «стрелки»)</span>
+              <span>придать взгляду выразительность<br/>(«подведя» глаза по линии роста ресниц или создав «стрелки»)</span>
             </div>
             <div class="why__item">
               <img src="./assets/icon/top-2.png" alt="icon">
@@ -246,7 +246,7 @@
             </div>
             <div class="why__item">
               <img src="./assets/icon/top-2.png" alt="icon">
-              <span>создать «идеальные» губы, исправив асимметрию, сделав акцент на контуре или придав насыщенность
+              <span>создать «идеальные» губы, исправив асимметрию, сделав акцент на контуре или&nbsp;придав насыщенность
                 цвету</span>
             </div>
           </div>
@@ -506,7 +506,8 @@
             </div>
           </div>
           <div class="services__button">
-            <a href="#sale-offer"><button class="services__button-btn primary-button">Записаться со скидкой 20%</button></a>
+            <a href="#sale-offer" class="services__button-btn primary-button">Записаться со скидкой
+                20%</a>
           </div>
         </div>
       </div>
@@ -621,15 +622,15 @@
           Яндекс Карты</a><iframe
           src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.520905%2C56.341837&mode=whatshere&whatshere%5Bpoint%5D=37.520905%2C56.341837&whatshere%5Bzoom%5D=17&z=17"
           width="100%" height="600" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
-          <div class="map__container">
-            <div class="map__info">
-              <div class="map__info-title">Малых Анна Юрьевна</div>
-              <div class="map__info-address">Загорская ул., 34А, 3й этаж</div>
-              <div class="map__info-schedule">Ежедневно: с 10:00 до 18:00</div>
-              <div class="map__info-tel"><a href="tel:+89260392990">8 (926) 039-29-90</a>
-                <a href="https://api.whatsapp.com/send?phone=+89260392990"</div>
-            </div>
+      <div class="map__container">
+        <div class="map__info">
+          <div class="map__info-title">Малых Анна Юрьевна</div>
+          <div class="map__info-address">Загорская ул., 34А, 3й этаж</div>
+          <div class="map__info-schedule">Ежедневно: с 10:00 до 18:00</div>
+          <div class="map__info-tel"><a href="tel:+89260392990">8 (926) 039-29-90</a>
+            <a href="https://api.whatsapp.com/send?phone=+89260392990" </div>
           </div>
+        </div>
     </section>
   </main>
 </body>
