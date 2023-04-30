@@ -163,6 +163,7 @@ body {
 .top-content__sale-info-percent {
   font-size: 90px;
   color: #93c76a;
+  font-weight: 700;
 }
 
 .top-content__sale-info-percent span {
