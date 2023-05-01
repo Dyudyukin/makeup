@@ -981,12 +981,17 @@ body {
   background: #ffffff;
   padding: 1px;
   height: 0;
+  transition: 0.2s ease-out;
 }
 
 .faq-item__text pre {
   visibility: hidden;
   font-family: inherit;
   line-height: 1.5em;
+  transition: 0.2s ease-in;
+  height: 0;
+  padding: 0 30px;
+  opacity: 0;
 }
 
 .faq-label input[type=checkbox]:checked~.faq-item .faq-item__header .faq-item__icon {
@@ -1002,6 +1007,9 @@ body {
 .faq-label input[type=checkbox]:checked~.faq-item .faq-item__text pre {
   visibility: visible;
   padding: 30px;
+  height: 100%;
+  opacity: 1;
+  transition: 0.2s ease-in;
 }
 
 .faq__text {
