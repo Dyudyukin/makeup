@@ -9,21 +9,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/main.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <title>Студия красоты</title>
 </head>
 
-<body>
+<body class="body">
   <main class="main" id="main">
     <section class="head">
       <div class="wrapper">
         <header>
           <div class="top-menu">
             <nav class="top-menu__nav">
+              <div class="burger-btn" id="burger">
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+              </div>
               <ul class="top-menu__list">
                 <li class="top-menu__item"><a href="#top-about">О мастере</a></li>
                 <li class="top-menu__item"><a href="#portfolio">Наши работы</a></li>
@@ -55,8 +59,8 @@
                     часов</span>
                 </div>
               </div>
-              <div class="top-content__sale-timer"><span class="hour">02</span>:<span class="minutes">02</span>:<span
-                  class="seconds">02</span>
+              <div class="top-content__sale-timer"><span class="hour">12</span>:<span class="minutes">34</span>:<span
+                  class="seconds">56</span>
               </div>
             </div>
             <form method="post" class="top-content__form">
@@ -91,7 +95,7 @@
         <div class="top-about__wrapper">
           <div class="top-about__left"><img src="./assets/img/top.jpg" alt="Image"></div>
           <div class="top-about__right">
-            <h2 class="top-about__title">Звёздный макияж от мастера <span>Анны Малых</span></h2>
+            <h2 class="top-about__title">Звёздный макияж от мастера <span>Анны&nbsp;Малых</span></h2>
             <div class="top-about__description">
               <div class="top-about__item">
                 <img class="top-about__img" src="./assets/icon/top-1.png" alt="icon">
@@ -148,7 +152,7 @@
         <div class="sale__content">
           <div class="sale__content-item">
             <div class="sale__content-discount"><span>20</span>%</div>
-            <div class="sale__content-text"><span>Скидка</span> запишитесь&nbsp;на перманентный&nbsp;макияж</div>
+            <div class="sale__content-text"><span>Скидка</span> запишитесь&nbsp;на перманентный макияж</div>
           </div>
           <div class="sale__button">
             <a href="#sale-offer" class="sale__button-btn primary-button">Записаться</a>
@@ -166,7 +170,7 @@
         <h2>Наши работы</h2>
         <div class="portfolio__brows">
           <div class="portfolio__brows-container">
-            <div class="portfolio__brows-image">
+            <div class="portfolio__brows-image portfolio__image">
               <img src="./assets/img/brows.jpg" alt="brows">
               <span>Брови</span>
             </div>
@@ -193,7 +197,7 @@
         </div>
         <div class="portfolio__lips">
           <div class="portfolio__lips-container">
-            <div class="portfolio__lips-image">
+            <div class="portfolio__lips-image portfolio__image">
               <img src="./assets/img/lips.jpg" alt="lips">
               <span>Губы</span>
             </div>
@@ -220,7 +224,7 @@
         </div>
         <div class="portfolio__cilia">
           <div class="portfolio__cilia-container">
-            <div class="portfolio__cilia-image">
+            <div class="portfolio__cilia-image portfolio__image">
               <img src="./assets/img/cilia.jpg" alt="cilia">
               <span>Ресницы</span>
             </div>
@@ -365,166 +369,257 @@
         <h2>Наши услуги</h2>
         <div class="services__container">
           <h3>Перманентный макияж</h3>
-          <div class="services__list">
-            <div class="services__item">
-              <div class="services__item-top">Пудровые брови</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
+          <div class="services-wrapper swiper">
+            <div class="services__list swiper-wrapper">
+              <div class="services__item">
+                <div class="services__item-top">Пудровые брови</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-2.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-2.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Акварельные губы</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Помадные губы</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Классическая стрелка</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Стрелка с растушевкой</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Стрелка с растушевкой</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Стрелка с растушевкой</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Стрелка с растушевкой</div>
+                <a data-fslightbox="gallery" href="./assets/img/services-1.jpg">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
             </div>
-            <div class="services__item">
-              <div class="services__item-top">Акварельные губы</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Помадные губы</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Классическая стрелка</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Стрелка с растушевкой</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Наращивание ресниц</h3>
-          <div class="services__list">
-            <div class="services__item">
-              <div class="services__item-top">Классика</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
+          <div class="services-wrapper swiper">
+            <div class="services__list swiper-wrapper">
+              <div class="services__item">
+                <div class="services__item-top">Классика</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Двойной обьем</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Тройной обьем</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Бархатный объём</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Голливуд</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Неполный объём</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
             </div>
-            <div class="services__item">
-              <div class="services__item-top">Двойной обьем</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Тройной обьем</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Бархатный объём</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Голливуд</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Неполный объём</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Эффекты</h3>
-          <div class="services__list">
-            <div class="services__item">
-              <div class="services__item-top">Натуральный</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
+          <div class="services-wrapper swiper">
+            <div class="services__list swiper-wrapper">
+              <div class="services__item">
+                <div class="services__item-top">Натуральный</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Кукольный</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Лисий</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Стрелка</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Подводка</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Мокрый</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
             </div>
-            <div class="services__item">
-              <div class="services__item-top">Кукольный</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <h3>Ламинирование бровей и ресниц</h3>
+          <div class="services-wrapper swiper">
+            <div class="services__list swiper-wrapper">
+              <div class="services__item">
+                <div class="services__item-top">Натуральный</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Кукольный</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Лисий</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Стрелка</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
+              <div class="services__item">
+                <div class="services__item-top">Подводка</div>
+                <a href="#!">
+                  <div class="services__item-img">
+                    <img src="./assets/img/services-1.jpg" alt="">
+                  </div>
+                  <div class="services__item-bottom">Посмотреть</div>
+                </a>
+              </div>
             </div>
-            <div class="services__item">
-              <div class="services__item-top">Лисий</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Стрелка</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Подводка</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
-            <div class="services__item">
-              <div class="services__item-top">Мокрый</div>
-              <a href="#!">
-                <div class="services__item-img">
-                  <img src="./assets/img/services-1.jpg" alt="">
-                </div>
-                <div class="services__item-bottom">Посмотреть</div>
-              </a>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <div class="services__button">
             <a href="#sale-offer" class="services__button-btn primary-button">Записаться со скидкой
@@ -545,17 +640,18 @@
                   <h3 class="faq-item__title">Как долго длится процедура нанесения перманентного макияжа?</h3>
                   <span class="faq-item__icon"></span>
                 </div>
-                <div class="faq-item__text">
-                  <pre>Время сеанса рассчитывается индивидуально и зависит от выбранного участка и техники нанесения татуажа. 
-В среднем процедура занимает от 1,5 до 3 часов.
-
-В это время входит:
-                  
-- консультация,
-- заполнение документации,
-- создание эскиза,
-- анестезия и подготовка к процедуре,
-- нанесение макияжа.</pre>
+                <div class="faq-item__content">
+                  <div class="faq-item__text">
+                    <p>Время сеанса рассчитывается индивидуально и зависит от выбранного участка и техники нанесения
+                      татуажа.</p>
+                      <p>В среднем процедура занимает от 1,5 до 3 часов.</p><br />
+                    <p>В это время входит:</p><br />
+                    <p>- консультация,</p>
+                    <p>- заполнение документации,</p>
+                    <p>- создание эскиза,</p>
+                    <p>- анестезия и подготовка к процедуре,</p>
+                    <p>- нанесение макияжа.</p>
+                  </div>
                 </div>
               </div>
             </label>
@@ -566,12 +662,15 @@
                   <h3 class="faq-item__title">Больно ли делать татуаж?</h3>
                   <span class="faq-item__icon"></span>
                 </div>
-                <div class="faq-item__text">
-                  <pre>Болезненность процедуры зависит от болевого порога клиента. 
-Для женщин важную роль играет день цикла, усталость, прием лекарственных препаратов 
-и другие внешние и внутренние факторы. Перед процедурой мастер проводит местную анестезию, 
-при необходимости повторяет ее в течение сеанса. Благодаря современным аппаратам, щадящим техникам 
-и качественным анестезирующим препаратам специалистам удается свести болевые ощущения к минимуму.</pre>
+                <div class="faq-item__content">
+                  <div class="faq-item__text">
+                    <p>Болезненность процедуры зависит от болевого порога клиента.
+                      Для женщин важную роль играет день цикла, усталость, прием лекарственных препаратов
+                      и другие внешние и внутренние факторы. Перед процедурой мастер проводит местную анестезию,
+                      при необходимости повторяет ее в течение сеанса. Благодаря современным аппаратам, щадящим техникам
+                      и качественным анестезирующим препаратам специалистам удается свести болевые ощущения к минимуму.
+                    </p>
+                  </div>
                 </div>
               </div>
             </label>
@@ -582,10 +681,12 @@
                   <h3 class="faq-item__title">Как долго прослужит перманентный макияж?</h3>
                   <span class="faq-item__icon"></span>
                 </div>
-                <div class="faq-item__text">
-                  <pre>Перманентный макияж держится от года до трех лет. 
-Минимальный срок службы перманентного макияжа бровей – 12 месяцев. 
-Дольше всего сохраняется пигмент, нанесенный на губы.</pre>
+                <div class="faq-item__content">
+                  <div class="faq-item__text">
+                    <p>Перманентный макияж держится от года до трех лет.</p>
+                      <p>Минимальный срок службы перманентного макияжа бровей – 12 месяцев.</p>
+                      <p>Дольше всего сохраняется пигмент, нанесенный на губы.</p>
+                  </div>
                 </div>
               </div>
             </label>
@@ -596,12 +697,14 @@
                   <h3 class="faq-item__title">Как я буду выглядеть после процедуры?</h3>
                   <span class="faq-item__icon"></span>
                 </div>
-                <div class="faq-item__text">
-                  <pre>После процедуры может наблюдаться отек в области нанесения перманентного макияжа, покраснение, припухлость.
-В некоторых случаях клиентки сталкиваются с временной асимметрией, связанной с отеком тканей.
-Первые дни цвет может казаться слишком ярким. Это временное явление. Оно пройдет после отпадания защитной
-корочки. Окончательно цвет стабилизируется в течение 28 дней с момента нанесения перманента, после чего
-рекомендуется провести коррекцию.</pre>
+                <div class="faq-item__content">
+                  <div class="faq-item__text">
+                    <p>После процедуры может наблюдаться отек в области нанесения перманентного макияжа, покраснение,
+                      припухлость. В некоторых случаях клиентки сталкиваются с временной асимметрией, связанной
+                      с отеком тканей. Первые дни цвет может казаться слишком ярким. Это временное явление.
+                      Оно пройдет после отпадания защитной корочки. Окончательно цвет стабилизируется в течение 28 дней
+                      с момента нанесения перманента, после чего рекомендуется провести коррекцию.</p>
+                  </div>
                 </div>
               </div>
             </label>
@@ -612,17 +715,18 @@
                   <h3 class="faq-item__title">КАковы правила ухода?</h3>
                   <span class="faq-item__icon"></span>
                 </div>
-                <div class="faq-item__text">
-                  <pre>Правила ухода за перманентным макияжем следующие:
+                <div class="faq-item__content">
+                  <div class="faq-item__text">
+                    <P>Правила ухода за перманентным макияжем следующие:</P><br />
 
-- не мочить – 4 дня,
-- не распаривать – 14 дней,
-- не загорать – 30 дней,
-- не отрывать, не ковырять, не чесать защитную корочку,
-- не использовать декоративную косметику до полного заживления тканей,
-- обрабатывать поврежденное место бепантеном, смазывать вазелином или маслом персика.
-
-От выполнения этих правил зависит конечный результат и время службы перманентного макияжа.</pre>
+                    <p>- не мочить – 4 дня,</p>
+                    <p>- не распаривать – 14 дней,</p>
+                    <p>- не загорать – 30 дней,</p>
+                    <p>- не отрывать, не ковырять, не чесать защитную корочку,</p>
+                    <p>- не использовать декоративную косметику до полного заживления тканей,</p>
+                    <p>- обрабатывать поврежденное место бепантеном, смазывать вазелином или маслом персика.</p><br />
+                    <p>От выполнения этих правил зависит конечный результат и время службы перманентного макияжа.</p>
+                  </div>
                 </div>
               </div>
             </label>
@@ -645,11 +749,14 @@
           <div class="map__info-address">Загорская ул., 34А, 3й этаж</div>
           <div class="map__info-schedule">Ежедневно: с 10:00 до 18:00</div>
           <div class="map__info-tel"><a href="tel:+89260392990">8 (926) 039-29-90</a>
-            <a href="https://api.whatsapp.com/send?phone=+89260392990" </div>
+            <a class="tel-api" href="https://api.whatsapp.com/send?phone=+89260392990" </div>
           </div>
         </div>
     </section>
   </main>
+  <script src="./js/fslightbox.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/main.js" defer></script>
 </body>
 
 </html>
