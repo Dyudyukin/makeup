@@ -17,12 +17,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+let phoneInput = document.getElementById("formPhone");
+let nameInput = document.getElementById("formName");
+
+const phoneMask = new IMask(phoneInput, {
+  mask: "+{7}(000)000-00-00",
+});
+
+nameInput.addEventListener("input", nameInputHandler);
+function nameInputHandler() {
+  if (nameInput.value.length < 2 ) {
+    nameInput.style.border = '2px solid #ce3f2c';
+    console.log(true);
+  } else {
+    nameInput.style.border = '2px solid #93C76a';
+    console.log(false);
+  }
+}
+
+phoneInput.addEventListener("input", phoneInputHandler);
+function phoneInputHandler() {
+  if (phoneMask.masked.isComplete) {
+    document.querySelector(".top-content__form-btn").classList.add("top-content__form-btn--active");
+    phoneInput.style.border = '2px solid #93C76a';
+  } else {
+    document.querySelector(".top-content__form-btn").classList.remove("top-content__form-btn--active");
+    phoneInput.style.border = '2px solid #ce3f2c';
+  }
+}
+
   var swiper = new Swiper('.swiper', {
     slidesPerView: 3,
     loop: true,
-    spaceBetween: 20,
-    // rewind: true,
-    // direction: getDirection(),
+    loopAdditionalSlides: 1,
+    loopedSlides: 3,
+    breakpoints: {
+      1023: {
+        slidesPerView: 1
+      }
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -44,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
       var swiper = new Swiper('.swiper', {
         slidesPerView: 1,
         loop: true,
+        loopAdditionalSlides: 0,
+        loopedSlides: 1,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -68,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
       var swiper = new Swiper('.swiper', {
         slidesPerView: 3,
         loop: true,
+        loopAdditionalSlides: 1,
+        loopedSlides: 3,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',

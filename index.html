@@ -63,9 +63,9 @@
                   class="seconds">56</span>
               </div>
             </div>
-            <form method="post" class="top-content__form">
-              <input type="text" name="name" placeholder="Ваше имя">
-              <input type="text" name="phone" placeholder="Ваш телефон">
+            <form class="top-content__form" action="https://echo.htmlacademy.ru/" method="POST">
+              <input type="text" id="formName" name="name" placeholder="Ваше имя" minlength="2" required>
+              <input type="text" id="formPhone" name="phone" placeholder="Ваш телефон" minlength="11" maxlength="18" required>
               <button class="top-content__form-btn primary-button">Отправить</button>
             </form>
           </div>
@@ -756,7 +756,8 @@
   </main>
   <script src="./js/fslightbox.js"></script>
   <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/main.js" defer></script>
+  <script src="./js/imask.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
