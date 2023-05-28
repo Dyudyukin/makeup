@@ -38,11 +38,40 @@ function nameInputHandler() {
 phoneInput.addEventListener("input", phoneInputHandler);
 function phoneInputHandler() {
   if (phoneMask.masked.isComplete) {
-    document.querySelector(".top-content__form-btn").classList.add("top-content__form-btn--active");
+    document.querySelector(".top-content__form-btn").classList.add("btn--active");
     phoneInput.style.border = '2px solid #93C76a';
   } else {
-    document.querySelector(".top-content__form-btn").classList.remove("top-content__form-btn--active");
+    document.querySelector(".top-content__form-btn").classList.remove("btn--active");
     phoneInput.style.border = '2px solid #ce3f2c';
+  }
+}
+
+let offerPhoneInput = document.getElementById("offerPhone");
+let offerNameInput = document.getElementById("offerName");
+
+const offerPhoneMask = new IMask(offerPhoneInput, {
+  mask: "+{7}(000)000-00-00",
+});
+
+offerNameInput.addEventListener("input", offerNameInputHandler);
+function offerNameInputHandler() {
+  if (offerNameInput.value.length < 2 ) {
+    offerNameInput.style.borderBottom = '2px solid #ce3f2c';
+    console.log(true);
+  } else {
+    offerNameInput.style.borderBottom = '1px solid #E6E4E9';
+    console.log(false);
+  }
+}
+
+offerPhoneInput.addEventListener("input", offerPhoneInputHandler);
+function offerPhoneInputHandler() {
+  if (offerPhoneMask.masked.isComplete) {
+    document.querySelector(".sale-offer__right-btn").classList.add("btn--active");
+    offerPhoneInput.style.borderBottom = '1px solid #E6E4E9';
+  } else {
+    document.querySelector(".sale-offer__right-btn").classList.remove("btn--active");
+    offerPhoneInput.style.borderBottom = '2px solid #ce3f2c';
   }
 }
 

@@ -252,8 +252,8 @@ body {
   pointer-events: none;
 }
 
-.top-content__form-btn--active {
-  pointer-events: auto;
+.btn--active {
+  pointer-events: auto !important;
 }
 
 .top-content__form-btn:hover {
@@ -790,6 +790,7 @@ body {
 .sale-offer__right-btn {
   margin-top: 30px;
   height: 60px;
+  pointer-events: none;
 }
 
 .skills {
