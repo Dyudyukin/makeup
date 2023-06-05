@@ -38,5 +38,7 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.parse(new Date()) + 2 * 24 * 60 * 60 * 1000);
+let dni = prompt('Введите количество дней');
+
+const deadline = new Date(Date.parse(new Date()) + dni * 24 * 60 * 60 * 1000);
 initializeClock('timer', deadline);
