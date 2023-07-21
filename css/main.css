@@ -194,17 +194,17 @@ body {
 }
 
 .top-content__sale-discount {
-  font-size: 25px;
+  font-size: 27px;
   color: #93c76a;
 }
 
 .top-content__sale-text {
-  font-size: 14px;
+  font-size: 17px;
 }
 
-.top-content__sale-time {
+/* .top-content__sale-time {
   font-size: 25px;
-}
+} */
 
 .top-content__sale-timer {
   display: flex;
